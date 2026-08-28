@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg: #0B0E14;
+  --panel: #121623;
+  --panel-raised: #171C2C;
+  --trace: #232A3D;
+  --trace-bright: #2E374F;
+  --text: #E7ECF5;
+  --text-dim: #8B95A8;
+  --text-faint: #565F73;
+  --lit: #FFC857;
+  --lit-glow: rgba(255, 200, 87, 0.45);
+  --success: #34D399;
+  --danger: #F0654B;
+
+  --font-display: "Manrope", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    linear-gradient(var(--trace) 1px, transparent 1px),
+    linear-gradient(90deg, var(--trace) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--lit-glow);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lit);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

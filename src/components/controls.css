@@ -1,0 +1,59 @@
+.controls {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.difficulty-select select {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  background: var(--panel-raised);
+  color: var(--text);
+  border: 1px solid var(--trace-bright);
+  border-radius: 6px;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+}
+
+.btn {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  border: 1px solid var(--trace-bright);
+  background: var(--panel-raised);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  border-color: var(--lit);
+  color: var(--lit);
+}
+
+.btn:disabled {
+  color: var(--text-faint);
+  cursor: default;
+}
+
+.btn-primary {
+  background: var(--lit);
+  border-color: var(--lit);
+  color: #1A1300;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  border-color: var(--lit);
+  color: #1A1300;
+  filter: brightness(1.08);
+}

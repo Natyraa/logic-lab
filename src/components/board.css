@@ -1,0 +1,38 @@
+.board {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--trace-bright);
+  border-radius: 10px;
+  width: min(420px, 90vw);
+}
+
+.cell {
+  aspect-ratio: 1;
+  border-radius: 6px;
+  border: 1px solid var(--trace-bright);
+  background: var(--panel-raised);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.12s, box-shadow 0.12s, transform 0.08s;
+}
+
+.cell:hover:not(:disabled) {
+  border-color: var(--lit);
+  transform: translateY(-1px);
+}
+
+.cell:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.cell.is-lit {
+  background: var(--lit);
+  border-color: var(--lit);
+  box-shadow: 0 0 18px 2px var(--lit-glow);
+}
